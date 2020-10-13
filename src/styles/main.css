@@ -1,0 +1,7 @@
+@import "@styles/common.css";
+@import "@styles/variables.css";
+
+#app {
+  text-align: center;
+  color: $blue;
+}
