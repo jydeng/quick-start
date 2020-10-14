@@ -29,22 +29,24 @@ module.exports = {
       {
         test: /\.js$/,
         exclude: /node_modules/,
-        use: {
-          loader: "babel-loader",
-          options: {
-            cacheDirectory: true,
-            presets: ["@babel/preset-env"],
-            plugins: [
-              [
-                "@babel/plugin-transform-runtime",
-                {
-                  // 3: 实现对于实例方法的支持
-                  corejs: 3,
-                },
+        use: [
+          {
+            loader: "babel-loader",
+            options: {
+              cacheDirectory: true,
+              presets: ["@babel/preset-env"],
+              plugins: [
+                [
+                  "@babel/plugin-transform-runtime",
+                  {
+                    // 3: 实现对于实例方法的支持
+                    corejs: 3,
+                  },
+                ],
               ],
-            ],
+            },
           },
-        },
+        ],
       },
       // 处理图片
       {
