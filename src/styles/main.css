@@ -1,4 +1,11 @@
-@import "@styles/common.css";
+/* @import "@styles/common.css"; */
+/* 基本 HTML 样式，包括重置后的Normalize.css */
+@import "tailwindcss/base";
+/* 组件样式 */
+@import "tailwindcss/components";
+/* 工具样式 */
+@import "tailwindcss/utilities";
+/* CSS变量 */
 @import "@styles/variables.css";
 
 #app {

@@ -19,28 +19,17 @@ function convertAlias(id) {
 }
 
 module.exports = {
-  // precss: CSS变量
+  // precss: 类似sass语法，并支持未来语法
   // tailwindcss: CSS解决方案
   // postcss-import: CSS 中可用@import导入文件
-  // postcss-cssnext: 使用下一个版本的CSS语法
   plugins: {
-    tailwindcss: path.resolve(__dirname, "./tailwind.config.js"),
-    "postcss-cssnext": {
-      browsers: [
-        // 兼容,不指定默认则是该插件默认范围,最近两个版本
-        ">1%",
-        "last 4 versions",
-        "Firefox ESR",
-        "not ie < 9",
-      ],
-      flexbox: "no-2009",
-    },
     "postcss-import": {
       resolve: function(id) {
         return convertAlias(id);
       },
     },
     "postcss-url": true,
+    tailwindcss: path.resolve(__dirname, "./tailwind.config.js"),
     precss: true,
   },
 };

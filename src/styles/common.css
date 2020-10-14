@@ -1,8 +1,0 @@
-/* purgecss start ignore */
-/* 基本 HTML 样式，包括重置后的Normalize.css */
-@tailwind base;
-/* 组件样式 */
-@tailwind components;
-/* purgecss end ignore */
-/* 工具样式 */
-@tailwind utilities;
