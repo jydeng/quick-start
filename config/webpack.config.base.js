@@ -1,6 +1,6 @@
 const path = require("path");
 const project = require("./project");
-const webpack = require("webpack");
+
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const VueLoaderPlugin = require("vue-loader/lib/plugin");
 const TerserPlugin = require("terser-webpack-plugin");
@@ -27,6 +27,7 @@ module.exports = {
       // 使用Babel处理js文件
       {
         test: /\.js$/,
+        include: [path.resolve(__dirname, "../src")],
         exclude: /node_modules/,
         use: [
           {
@@ -50,6 +51,7 @@ module.exports = {
       // 处理图片
       {
         test: /\.(png|jpe?g|gif|webp)(\?.*)?$/,
+        include: [path.resolve(__dirname, "../src/assets")],
         exclude: /node_modules/,
         use: [
           // 图片size小于10K自动转成base64
@@ -88,6 +90,8 @@ module.exports = {
       // 处理字体
       {
         test: /\.(woff2?|eot|ttf|otf)(\?.*)?$/,
+        include: [path.resolve(__dirname, "../src/assets")],
+        exclude: /node_modules/,
         use: [
           {
             loader: "url-loader",
@@ -102,6 +106,7 @@ module.exports = {
       {
         test: /\.vue$/,
         use: ["vue-loader"],
+        include: [path.resolve(__dirname, "../src")],
         exclude: /node_modules/,
       },
     ],
@@ -113,8 +118,6 @@ module.exports = {
       filename: "index.html",
       template: path.resolve(__dirname, "../src/template.html"),
     }),
-    // 启动HMR
-    new webpack.HotModuleReplacementPlugin(),
     // 处理*.vue文件
     new VueLoaderPlugin(),
   ],

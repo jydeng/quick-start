@@ -24,6 +24,7 @@ module.exports = {
   // postcss-import: CSS 中可用@import导入文件
   // postcss-cssnext: 使用下一个版本的CSS语法
   plugins: {
+    tailwindcss: path.resolve(__dirname, "./tailwind.config.js"),
     "postcss-cssnext": {
       browsers: [
         // 兼容,不指定默认则是该插件默认范围,最近两个版本
@@ -39,7 +40,6 @@ module.exports = {
         return convertAlias(id);
       },
     },
-    tailwindcss: path.resolve(__dirname, "./tailwind.config.js"),
     "postcss-url": true,
     precss: true,
   },

@@ -15,6 +15,8 @@ module.exports = merge(base, {
       {
         // 用正则去匹配要用该 loader 转换的 CSS 文件
         test: /\.css$/,
+        include: [path.resolve(__dirname, "../src")],
+        exclude: /node_modules/,
         use: [
           MiniCssExtractPlugin.loader,
           "css-loader",

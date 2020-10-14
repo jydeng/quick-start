@@ -8,8 +8,8 @@ module.exports = {
     let alias = {
       "@app": path.join(process.cwd(), "src"),
       "@styles": path.join(process.cwd(), "src/styles"),
-      "@assets": path.join(process.cwd(), "assets"),
-      "@utils": path.join(process.cwd(), "utils"),
+      "@assets": path.join(process.cwd(), "src/assets"),
+      "@utils": path.join(process.cwd(), "src/utils"),
     };
 
     // 缓存别名信息, postcss 接下来会用到
