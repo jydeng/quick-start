@@ -1,6 +1,7 @@
 const path = require("path");
 const { merge } = require("webpack-merge");
 const base = require("./webpack.config.base");
+const FriendlyErrorsWebpackPlugin = require("friendly-errors-webpack-plugin");
 
 module.exports = merge(base, {
   // 模式
@@ -32,5 +33,13 @@ module.exports = merge(base, {
       },
     ],
   },
-  plugins: [],
+  plugins: [
+    // 美化输出
+    new FriendlyErrorsWebpackPlugin({
+      compilationSuccessInfo: {
+        messages: [`Your application is running here: http://localhost:8080`],
+      },
+      clearConsole: true,
+    }),
+  ],
 });

@@ -4,7 +4,6 @@ const webpack = require("webpack");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const VueLoaderPlugin = require("vue-loader/lib/plugin");
 const TerserPlugin = require("terser-webpack-plugin");
-const FriendlyErrorsWebpackPlugin = require("friendly-errors-webpack-plugin");
 
 module.exports = {
   // 入口文件
@@ -118,8 +117,6 @@ module.exports = {
     new webpack.HotModuleReplacementPlugin(),
     // 处理*.vue文件
     new VueLoaderPlugin(),
-    // 美化输出
-    new FriendlyErrorsWebpackPlugin(),
   ],
   optimization: {
     // 开启Scope Hoisting
