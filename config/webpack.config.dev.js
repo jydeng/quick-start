@@ -8,7 +8,7 @@ module.exports = merge(base, {
   // 模式
   mode: "development",
   // devTool配置
-  devtool: "source-map",
+  devtool: "eval-cheap-module-source-map",
   // devServer配置
   devServer: {
     // 模块热刷新

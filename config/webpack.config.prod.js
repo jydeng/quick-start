@@ -9,7 +9,7 @@ module.exports = merge(base, {
   // 模式
   mode: "production",
   // devTool配置
-  devtool: "source-map",
+  devtool: "cheap-module-source-map",
   module: {
     rules: [
       {

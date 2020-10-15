@@ -1,6 +1,8 @@
 module.exports = {
   // 移除未使用的CSS
   purge: {
+    // 始终启用purge，不启用则tailwindCSS文件过大，编译速度很慢
+    enabled: true,
     content: ["./src/**/*.html", "./src/**/*.vue"],
   },
   theme: {},
