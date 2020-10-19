@@ -102,6 +102,17 @@ module.exports = {
           },
         ],
       },
+      // 处理svg图标
+      {
+        test: /\.svg$/,
+        loader: "svg-sprite-loader",
+        include: [path.resolve(__dirname, "../src/assets")],
+        options: {
+          // 使用方式 icon-[文件名]
+          // 栗子：icon-head
+          symbolId: "icon-[name]",
+        },
+      },
       // 处理.vue文件
       {
         test: /\.vue$/,

@@ -1,7 +1,5 @@
 <template>
-  <div>
-    1234567890123678
-    <input type="text" />
+  <div id="app">
     <router-view></router-view>
   </div>
 </template>

@@ -1,8 +1,6 @@
+/* purgecss start ignore */
 @import "tailwindcss/base"; /* 基本 HTML 样式，包括重置后的Normalize.css */
 @import "tailwindcss/components"; /* 组件样式 */
+/* purgecss start ignore */
 @import "tailwindcss/utilities"; /* 工具样式 */
 @import "@styles/variables.css"; /* CSS变量 */
-
-#app {
-  text-align: center;
-}

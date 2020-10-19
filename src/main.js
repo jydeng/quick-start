@@ -1,8 +1,18 @@
+// Vue 3件套
 import Vue from "vue";
-import "@styles/main.css";
-import App from "./App";
 import router from "./routers";
 import store from "./store";
+// 主样式
+import "@styles/main.css";
+// svg图标
+import "./assets/icons";
+// 自定义组件
+import components from "./components";
+// 一切的开始
+import App from "./App";
+
+// 引用自定义组件
+Vue.use(components);
 
 // 初始化vue实例
 const entity = new Vue({
