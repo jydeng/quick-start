@@ -15,7 +15,7 @@
     "quick-start"
   ],
   "author": "jydeng",
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
     "@babel/core": "^7.11.6",
     "@babel/plugin-transform-runtime": "^7.11.5",
