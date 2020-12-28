@@ -17,6 +17,8 @@ module.exports = merge(base, {
     quiet: true,
     // base目录
     contentBase: "./dist",
+    // 端口
+    port: 9000
   },
   module: {
     rules: [
@@ -46,7 +48,7 @@ module.exports = merge(base, {
     // 美化输出
     new FriendlyErrorsWebpackPlugin({
       compilationSuccessInfo: {
-        messages: [`Your application is running here: http://localhost:8080`],
+        messages: [`Your application is running here: http://localhost:9000`],
       },
       clearConsole: true,
     }),

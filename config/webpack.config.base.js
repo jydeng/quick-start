@@ -46,6 +46,13 @@ module.exports = {
               ],
             },
           },
+          // 引用自己编写的loader
+          // {
+          //   loader: path.resolve(__dirname, "./loaders/my-loader"),
+          //   options: {
+          //     name: 'Roy'
+          //   }
+          // },
         ],
       },
       // 处理图片
