@@ -5,6 +5,8 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const VueLoaderPlugin = require("vue-loader/lib/plugin");
 const TerserPlugin = require("terser-webpack-plugin");
 
+// const MyWebpackPlugin = require("./plugins/my-plugin");
+
 module.exports = {
   // 入口文件
   entry: { app: "./src/main.js" },
@@ -138,6 +140,8 @@ module.exports = {
     }),
     // 处理*.vue文件
     new VueLoaderPlugin(),
+    // // 自定义Plugin
+    // new MyWebpackPlugin({ options: true }),
   ],
   optimization: {
     // 开启Scope Hoisting
