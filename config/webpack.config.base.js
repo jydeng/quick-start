@@ -4,7 +4,7 @@ const project = require("./project");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const VueLoaderPlugin = require("vue-loader/lib/plugin");
 const TerserPlugin = require("terser-webpack-plugin");
-
+const CopyPlugin = require("copy-webpack-plugin");
 // const MyWebpackPlugin = require("./plugins/my-plugin");
 
 module.exports = {
@@ -137,6 +137,15 @@ module.exports = {
       title: project.name,
       filename: "index.html",
       template: path.resolve(__dirname, "../src/template.html"),
+    }),
+    // 拷贝文件
+    new CopyPlugin({
+      patterns: [
+        {
+          from: path.resolve(__dirname, "../src/public"),
+          to: path.resolve(__dirname, "../dist/public"),
+        },
+      ],
     }),
     // 处理*.vue文件
     new VueLoaderPlugin(),
