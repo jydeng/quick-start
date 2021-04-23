@@ -8,7 +8,8 @@
     "serve:https": "cross-env NODE_ENV=development webpack-dev-server --open --config ./config/webpack.config.dev.https.js",
     "build": "cross-env NODE_ENV=production webpack --config ./config/webpack.config.prod.js",
     "analyze:size": "cross-env NODE_ENV=production webpack --config ./config/webpack.config.analyze.size.js",
-    "analyze:speed": "cross-env NODE_ENV=production webpack --config ./config/webpack.config.analyze.speed.js"
+    "analyze:speed": "cross-env NODE_ENV=production webpack --config ./config/webpack.config.analyze.speed.js",
+    "commit": "git-cz"
   },
   "keywords": [
     "webpack",
